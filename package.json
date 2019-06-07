@@ -1,0 +1,43 @@
+{
+  "name": "javascipt-hello-world",
+  "version": "1.0.0",
+  "description": "JavaScript Hello World",
+  "scripts": {
+    "prestart": "node buildScripts/startMessage.js",
+    "start": "npm-run-all --parallel app share lint:watch test:watch",
+    "app": "node buildScripts/srcServer.js",
+    "share": "lt --port 3000",
+    "lint": "esw src buildScripts --color",
+    "lint:watch": "npm run lint -- --watch",
+    "test": "mocha --reporter progress \"src/**/*.test.js\"",
+    "test:watch": "npm run test -- --watch"
+  },
+  "author": "WHOKnows",
+  "license": "Secrets",
+  "dependencies": {
+    "whatwg-fetch": "1.0.0"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "chalk": "2.4.2",
+    "cheerio": "1.0.0-rc.3",
+    "compression": "1.7.4",
+    "cross-env": "5.2.0",
+    "css-loader": "2.1.1",
+    "eslint": "5.16.0",
+    "eslint-plugin-import": "2.17.2",
+    "eslint-watch": "5.1.2",
+    "express": "4.17.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "faker": "^4.1.0",
+    "html-webpack-plugin": "3.2.0",
+    "jsdom": "9.8.0",
+    "json-schema-faker": "0.5.0-rc16",
+    "json-server": "0.14.0",
+    "localtunnel": "1.9.1",
+    "mocha": "6.1.4",
+    "npm-run-all": "4.1.5",
+    "numeral": "2.0.6",
+    "open": "6.3.0"
+  }
+}
