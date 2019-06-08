@@ -5,8 +5,9 @@ node_js:
 jobs:
   include:
     - stage: Audit
+      install: npm install -g npm-audit-ci
       script:
-        - npm audit
+        - npm-audit-ci
 
 
     # - stage: Unit Tests
