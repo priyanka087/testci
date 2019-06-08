@@ -5,8 +5,9 @@ node_js:
 jobs:
   include:
     - stage: Lint
+      install: npm install -g npm-audit-resolver
       script:
-        - audit-ci --moderate
+        - check-audit
         - npm run lint
 
     # - stage: Unit Tests
