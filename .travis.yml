@@ -5,7 +5,7 @@ jobs:
   include:
     - stage: Lint
       install: "npm install"
-      script: "npm run lint:watch"
+      script: "npm run lint"
 
     - stage: Unit Tests
       script: "npm run test"
