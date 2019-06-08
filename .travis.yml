@@ -4,11 +4,11 @@ node_js:
 
 jobs:
   include:
-    - stage: Lint
+    - stage: Audit
       install: npm install -g npm-audit-resolver
       script:
-        - check-audit
-        - npm run lint
+        - check-audit --json
+
 
     # - stage: Unit Tests
     #   script: npm run test
