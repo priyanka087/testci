@@ -11,7 +11,7 @@ jobs:
       script:
         - npm-audit-ci
 
-    - stage: lint
+    - stage: Lint Checking
       script: npm run lint
 
     - stage: Unit Tests
