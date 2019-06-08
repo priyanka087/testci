@@ -6,7 +6,7 @@
     "prestart": "node buildScripts/startMessage.js",
     "start": "npm-run-all --parallel app audit share lint:watch test:watch",
     "app": "node buildScripts/srcServer.js",
-    "audit": "npm audit --json >> audit/report.json",
+    "audit": "npm audit --json >> audit_report.json",
     "share": "lt --port 3000",
     "lint": "esw src buildScripts --color",
     "lint:watch": "npm run lint -- --watch",
