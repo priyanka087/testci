@@ -1,15 +1,11 @@
+language: node_js
+node_js:
+  - "9"
 jobs:
   include:
     - stage: Lint
-      language: node_js
-      node_js:
-        - "9"
       install: "npm install"
       script: "npm run lint:watch"
 
-    - stage: "Unit tests"
-      language: node_js
-      node_js:
-        - "9"
-      install: "npm install -g mocha"
+    - stage: Unit Tests
       script: "npm run test"
