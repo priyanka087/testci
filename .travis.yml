@@ -6,7 +6,7 @@ jobs:
   include:
     - stage: Audit
       script:
-        - npm audit
+        - npm run audit
 
 
     # - stage: Unit Tests
