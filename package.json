@@ -1,11 +1,11 @@
 {
   "name": "javascipt-hello-world",
   "version": "1.0.0",
-  "bin": "bin/npm-audit-ci",
   "description": "JavaScript Hello World",
   "scripts": {
     "prestart": "node buildScripts/startMessage.js",
     "start": "npm-run-all --parallel app share lint:watch test:watch",
+    "audit": "npm-audit-ci",
     "app": "node buildScripts/srcServer.js",
     "share": "lt --port 3000",
     "lint": "esw src buildScripts --color",

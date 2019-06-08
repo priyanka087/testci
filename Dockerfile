@@ -1,4 +1,4 @@
-FROM node:9
+FROM node:11
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -16,4 +16,3 @@ RUN npm install
 COPY . .
 
 EXPOSE 3000
-CMD [ "npm", "start" ]

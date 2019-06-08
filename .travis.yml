@@ -1,7 +1,9 @@
 language: node_js
 node_js:
   - 11
-
+cache:
+  directories:
+    - ~/.npm
 jobs:
   include:
     - stage: Audit
@@ -9,10 +11,12 @@ jobs:
       script:
         - npm-audit-ci
 
+    - stage: lint
+      script: npm run lint
 
-    # - stage: Unit Tests
-    #   script: npm run test
+    - stage: Unit Tests
+      script: npm run test
 
-    # - stage: Build Application
-    #   script:
-    #     - docker build --tag app-nodejs .
+    - stage: Build Application
+      script:
+        - docker build --tag app-nodejs .
