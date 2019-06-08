@@ -5,4 +5,4 @@ jobs:
       node_js:
         - "9"
       install: "npm install"
-      script: "npm lint"
+      script: "npm run lint:watch"
