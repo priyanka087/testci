@@ -7,7 +7,7 @@ jobs:
     - stage: Audit
       install: npm install -g npm-audit-resolver
       script:
-        - check-audit --json
+        - npm audit --parseable | awk -F $'\t' '{print $1,$4}'
 
 
     # - stage: Unit Tests
