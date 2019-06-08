@@ -5,7 +5,7 @@ node_js:
 jobs:
   include:
     - stage: Audit
-      install: npm install -g npm-audit-resolver
+      install: npm install
       script:
         - npm audit --parseable | awk -F $'\t' '{print $1,$4}'
 
