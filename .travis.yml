@@ -9,3 +9,10 @@ jobs:
 
     - stage: Unit Tests
       script: "npm run test"
+
+    - stage: Build Applicatoin
+      sudo: required
+      services:
+        - docker
+      script:
+        - docker build --tag app-nodejs .
