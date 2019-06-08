@@ -1,15 +1,18 @@
 language: node_js
 node_js:
-  - "9"
+  - 9
+
 jobs:
   include:
     - stage: Lint
-      install: "npm install"
-      script: "npm run lint"
-
-    - stage: Unit Tests
-      script: "npm run test"
-
-    - stage: Build Application
+      install: npm ci
       script:
-        - docker build --tag app-nodejs .
+        - audit-ci --moderate
+        - npm run lint
+
+    # - stage: Unit Tests
+    #   script: npm run test
+
+    # - stage: Build Application
+    #   script:
+    #     - docker build --tag app-nodejs .
