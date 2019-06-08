@@ -5,4 +5,4 @@ jobs:
       node_js:
         - "9"
       install: "npm install"
-      script: "esw src buildScripts --color"
+      script: "npm lint"
