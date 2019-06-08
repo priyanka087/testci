@@ -6,3 +6,10 @@ jobs:
         - "9"
       install: "npm install"
       script: "npm run lint:watch"
+
+    - stage: "Unit tests"
+      language: node_js
+      node_js:
+        - "9"
+      install: "npm install -g mocha"
+      script: "npm run test"
