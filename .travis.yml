@@ -10,6 +10,7 @@ jobs:
       install: npm install -g npm-audit-ci
       script:
         - npm-audit-ci
+        - npm audit
 
     - stage: Lint Checking
       script: npm run lint
