@@ -5,11 +5,8 @@ node_js:
 jobs:
   include:
     - stage: Audit
-      install:
-        - npm install --save-exact lodash@4.0.0
-        - npm install --save node-os-utils
       script:
-        - npm run audit
+        - npm run audit -s
 
 
     # - stage: Unit Tests
