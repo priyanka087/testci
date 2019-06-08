@@ -16,6 +16,8 @@
   "author": "WHOKnows",
   "license": "Secrets",
   "dependencies": {
+    "lodash": "4.0.0",
+    "node-os-utils": "^1.0.7",
     "whatwg-fetch": "1.0.0"
   },
   "devDependencies": {
