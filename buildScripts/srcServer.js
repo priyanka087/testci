@@ -1,19 +1,32 @@
-var express = require('express');
-var path = require('path');
-var open = require('open');
+'use strict';
+const express = require('express');
+const fs = require("fs")
+const git = require('git-rev-sync');
 
-var port = 3000;
+// Constants
+const PORT = 3000;
+const HOST = '0.0.0.0';
+const VERSION = process.env.npm_package_version;
+const SHA_LONG=git.long()
+
+// Write the version and last commit sha to text files
+
+fs.writeFileSync('./src/version.txt', VERSION);
+fs.writeFileSync('./src/sha.txt', SHA_LONG)
+
+// APP
 var app = express();
 
-app.get('/', function(req,res) {
-
-  res.sendFile(path.join(__dirname, '../src/index.html'))
+app.get('/', (req,res) => {
+  res.send('APP Version Number: '+VERSION+' ');
 });
 
-app.listen (port, function(err){
-  if (err) {
-    console.log(err); //eslint-disable-line no-console
-  } else {
-    open('http://localhost:' + port);
-   }
+app.get('/git', function (req, res) {
+  fs.readFile( __dirname + "/" + "../src/sha.txt", 'utf8', function (err, data) {
+    console.log( data); //eslint-disable-line no-console
+    res.end( data );
   });
+});
+
+app.listen(PORT,HOST);
+console.log(`Application running on http://${HOST}:${PORT}`); //eslint-disable-line no-console

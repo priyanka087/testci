@@ -8,7 +8,6 @@ npm-debug.log*
 
 # node-waf configuration and audit file
 .lock-wscript
-audit_report.json
 
 # Optional npm cache directory
 .npm
