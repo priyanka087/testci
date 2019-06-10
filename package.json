@@ -4,7 +4,7 @@
   "description": "JavaScript Hello World",
   "scripts": {
     "prestart": "node buildScripts/startMessage.js",
-    "start": "npm-run-all --parallel app test lint:watch test:watch",
+    "start": "npm-run-all --parallel app test",
     "audit": "npm-audit-ci",
     "app": "node buildScripts/srcServer.js",
     "share": "lt --port 3000",
