@@ -16,7 +16,9 @@ jobs:
       script: npm run lint
 
     - stage: Unit Tests
-      script: npm run test
+      script:
+        - npm start
+        - npm run test
 
     - stage: Build Application
       script:
