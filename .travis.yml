@@ -18,7 +18,6 @@ jobs:
     - stage: Unit Tests
       script:
         - npm start
-        - npm run test
 
     - stage: Build Application
       script:
