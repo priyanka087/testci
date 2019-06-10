@@ -24,7 +24,7 @@ app.get('/', (req,res) => {
 app.get('/git', function (req, res) {
   fs.readFile( __dirname + "/" + "../src/sha.txt", 'utf8', function (err, data) {
     console.log( data); //eslint-disable-line no-console
-    res.end( data );
+    res.send( data );
   });
 });
 

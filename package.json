@@ -5,6 +5,7 @@
   "scripts": {
     "prestart": "node buildScripts/startMessage.js",
     "start": "npm-run-all --parallel app test",
+    "travis_start" :" node buildScripts/srcServer.js &",
     "audit": "npm-audit-ci",
     "app": "node buildScripts/srcServer.js",
     "share": "lt --port 3000",
