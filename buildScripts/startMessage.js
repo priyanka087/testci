@@ -1,3 +1,6 @@
+// Node Module
 const chalk = require('chalk');
 
-console.log(chalk.green(' Starting app....'));
+// Let the user of application starts with color
+
+console.log(chalk.green(' Starting app....')); //eslint-disable-line no-console
