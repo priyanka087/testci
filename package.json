@@ -16,6 +16,11 @@
   },
   "author": "Shekhar",
   "license": "MIT",
+  "main":"app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shekhar84/TT2.git"
+  },
   "dependencies": {
     "express": "4.17.0",
     "jsonfile": "^5.0.0",
