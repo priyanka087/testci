@@ -1,25 +1,25 @@
 {
-  "name": "javascipt-hello-world",
+  "name": "javascipt-application-version",
   "version": "1.0.0",
-  "description": "JavaScript Hello World",
+  "description": "JavaScript Application version",
   "scripts": {
     "prestart": "node buildScripts/startMessage.js",
-    "start": "npm-run-all --parallel app test",
-    "travis_start" :" node buildScripts/srcServer.js &",
+    "start": "npm-run-all --parallel app test lint:watch test:watch ",
+    "travis_start": " node buildScripts/app.js &",
     "audit": "npm-audit-ci",
-    "app": "node buildScripts/srcServer.js",
+    "app": "node buildScripts/app.js",
     "share": "lt --port 3000",
     "lint": "esw buildScripts --color",
     "lint:watch": "npm run lint -- --watch",
     "test": "mocha --reporter progress \"buildScripts/*.test.js\"",
     "test:watch": "npm run test -- --watch"
   },
-  "author": "WHOKnows",
+  "author": "Shekhar",
   "license": "MIT",
   "dependencies": {
-    "whatwg-fetch": "1.0.0",
-    "body-parser": "^1.16.2",
-    "express": "4.17.0"
+    "express": "4.17.0",
+    "jsonfile": "^5.0.0",
+    "whatwg-fetch": "1.0.0"
   },
   "devDependencies": {
     "audit-ci": "^2.0.1",
